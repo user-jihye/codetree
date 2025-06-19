@@ -13,5 +13,7 @@ public class NlPreString3 {
     String str = sc.next();
     String new_str = str.charAt(0) + "a" + str.substring(2, str.length()-2) + 'a' + str.charAt(str.length()-1);
     System.out.println(new_str);
+
   }
 }
+
