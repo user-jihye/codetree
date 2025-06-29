@@ -1,0 +1,11 @@
+package org.imjihye.trail01.chapter01.lesson01;
+
+/**
+ * @see <a href="https://www.codetree.ai/ko/trails/complete/curated-cards/intro-print-quote/description">LINK</a>
+ */
+public class IntroPrintQuote {
+
+  public static void main(String[] args) {
+    System.out.print("He says \"It's a really simple sentence\".");
+  }
+}
