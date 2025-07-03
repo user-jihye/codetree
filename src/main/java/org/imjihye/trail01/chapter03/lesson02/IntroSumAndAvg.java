@@ -16,6 +16,6 @@ public class IntroSumAndAvg {
     int sum = a + b;
     double avg = (double)sum / 2;
 
-    System.out.print(sum + " " + avg);
+    System.out.printf("%d %.1f", sum, avg);
   }
 }
