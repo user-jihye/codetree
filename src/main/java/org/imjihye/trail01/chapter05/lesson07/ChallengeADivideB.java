@@ -14,13 +14,21 @@ public class ChallengeADivideB {
     b = sc.nextInt();
 
     System.out.print((a / b) + ".");
-    int remainder = a % b;
 
     // (a / b)에서 소수점을 구하는 방법 :
     // (a를 b로 나눈 나머지에 * 10) / b로 나눴을 때의 몫
+    a %= b;
     for (int i = 0; i < 20; i++) {
-      System.out.print((remainder * 10) / b);
-      remainder = (remainder * 10) % b;
+      a *= 10;
+      System.out.print(a / b);
+      a %= b;
     }
+
+//    int remainder = a % b;
+//    for (int i = 0; i < 20; i++) {
+//      System.out.print((remainder * 10) / b);
+//      remainder = (remainder * 10) % b;
+//    }
+
   }
 }
