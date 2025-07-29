@@ -21,5 +21,8 @@ public class TestOutputTwoRectangles {
       }
       System.out.println();
     }
+
+
+
   }
 }
