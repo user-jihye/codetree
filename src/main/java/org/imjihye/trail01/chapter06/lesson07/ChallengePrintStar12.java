@@ -10,29 +10,54 @@ public class ChallengePrintStar12 {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
-    String[][] arr = new String[n][n];
 
     for (int i = 0; i < n; i++) {
-      for (int j = 0; j < n; j++) {
-        arr[i][j] = "  ";
-      }
-    }
-
-    for (int j = 0; j < n; j++) {
-      for (int i = 0; i <= j; i++) {
+      for(int j = 0; j < n; j++) {
         if (j % 2 == 0) {
-          arr[0][j] = "* ";
+          if (i == 0)
+            System.out.print("* ");
+          else
+            System.out.print("  ");
         } else {
-          arr[i][j] = "* ";
+          if (i <= j)
+            System.out.print("* ");
+          else
+            System.out.print("  ");
         }
-      }
-    }
-
-    for (int i = 0; i < n; i++) {
-      for (int j = 0; j < n; j++) {
-        System.out.print(arr[i][j]);
       }
       System.out.println();
     }
+
+//    for (int y = 0; y < n; y++) {
+//      for (int x = 0; x < n; x++) {
+//        if (y == 0 || (y <= x && x % 2 == 1)) {
+//          System.out.printf("* ");
+//          continue;
+//        }
+//
+//        System.out.printf("  ");
+//      }
+//      System.out.println();
+//    }
+
+
+//    for (int i = 0; i < n; i++) {
+//      for (int j = 0; j < n; j++) {
+//        if (j % 2 == 0) {
+//          if (i == 0) {
+//            System.out.print("* ");
+//          } else {
+//            System.out.print("  ");
+//          }
+//        } else {
+//          if (i <= j) {
+//            System.out.print("* ");
+//          } else {
+//            System.out.print("  ");
+//          }
+//        }
+//      }
+//      System.out.println();
+//    }
   }
 }
