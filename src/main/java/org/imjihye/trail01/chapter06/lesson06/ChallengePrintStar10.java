@@ -11,33 +11,15 @@ public class ChallengePrintStar10 {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
 
-    int even = n, odd = 1;
-    for (int i = 1; i <= n; i++) {
-      if (i % 2 == 1) {
-        for (int j = 0; j < odd; j++) {
-          System.out.print("* ");
-        }
-        odd++;
-      } else {
-        for (int j = 0; j < even; j++) {
-          System.out.print("* ");
-        }
-        even--;
-      }
-      System.out.println();
-    }
-
-    for (int i = n; i > 0; i--) {
+    for (int i = 0; i < n * 2; i++) {
       if (i % 2 == 0) {
-        for (int j = 0; j < odd; j++) {
+        for (int j = 0; j < (i / 2) + 1; j++) {
           System.out.print("* ");
         }
-        odd++;
       } else {
-        for (int j = 0; j < even; j++) {
+        for (int j = 0; j < n - (i / 2); j++) {
           System.out.print("* ");
         }
-        even--;
       }
       System.out.println();
     }
