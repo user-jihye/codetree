@@ -14,16 +14,13 @@ public class TestOutputDefferentlyEachRow {
     int cnt = 0;
 
     for (int y = 1; y <= n; y++) {
-      if (y % 2 == 1) {
-        for (int x = 1; x <= n; x++) {
+      for (int x = 1; x <= n; x++) {
+        if (y % 2 == 1) {
           cnt += 1;
-          System.out.print(cnt + " ");
-        }
-      } else {
-        for (int x = 1; x <= n; x++) {
+        } else {
           cnt += 2;
-          System.out.print(cnt + " ");
         }
+        System.out.print(cnt + " ");
       }
       System.out.println();
     }
