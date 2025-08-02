@@ -10,25 +10,41 @@ public class ChallengePrintInUpDownReverse {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
-    int[][] arr = new int[n][n];
 
-    for (int x = 0; x < n; x++) {
-      if (x % 2 == 0) {
-        for (int y = 0; y < n; y++) {
-          arr[x][y] = y + 1;
-        }
-      } else {
-        for (int y = 0; y < n; y++) {
-          arr[x][y] = n - y;
+    // 방법1
+    for (int y = 0; y < n; y++) {
+      for (int x = 0; x < n; x++) {
+        if (x % 2 == 0) {
+          System.out.print(y + 1);
+        } else {
+          System.out.print(n - y);
         }
       }
-    }
-
-    for (int y = 0; y < n; y++) {
-       for (int x = 0; x < n; x++) {
-         System.out.print(arr[x][y]);
-       }
       System.out.println();
     }
+
+
+
+    // 방법2
+//    int[][] arr = new int[n][n];
+//
+//    for (int x = 0; x < n; x++) {
+//      if (x % 2 == 0) {
+//        for (int y = 0; y < n; y++) {
+//          arr[x][y] = y + 1;
+//        }
+//      } else {
+//        for (int y = 0; y < n; y++) {
+//          arr[x][y] = n - y;
+//        }
+//      }
+//    }
+//
+//    for (int y = 0; y < n; y++) {
+//       for (int x = 0; x < n; x++) {
+//         System.out.print(arr[x][y]);
+//       }
+//      System.out.println();
+//    }
   }
 }
