@@ -11,7 +11,7 @@ public class ChallengeReceive10Inputs {
     Scanner sc = new Scanner(System.in);
 
     int[] arr = new int[10];
-    int cnt = 0;
+    int cnt = 0, sum = 0;
 
     for (int i = 0; i < 10; i++) {
       arr[i] = sc.nextInt();
@@ -19,12 +19,8 @@ public class ChallengeReceive10Inputs {
       if (arr[i] == 0)
         break;
 
-      cnt++;
-    }
-
-    int sum = 0;
-    for (int i = 0; i < cnt; i++) {
       sum += arr[i];
+      cnt++;
     }
 
     double avg = (double) sum / cnt;
