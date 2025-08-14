@@ -11,17 +11,18 @@ public class ChallengePrintInSpecificConditions {
 
     Scanner sc = new Scanner(System.in);
     int[] arr = new int[100];
-    int cnt = 0;
+    int zeroPoint = 0;
 
     for (int i = 0; i < 100; i++) {
       arr[i] = sc.nextInt();
-      cnt++;
 
-      if (arr[i] == 0)
+      if (arr[i] == 0) {
+        zeroPoint = i;
         break;
+      }
     }
 
-    for (int i = 0; i < cnt-1; i++) {
+    for (int i = 0; i < zeroPoint; i++) {
       if (arr[i] % 2 == 1)
         System.out.print(arr[i] + 3 + " ");
       else
