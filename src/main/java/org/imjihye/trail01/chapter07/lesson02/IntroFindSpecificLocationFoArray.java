@@ -20,7 +20,7 @@ public class IntroFindSpecificLocationFoArray {
     int threeSum = 0, threeCnt = 0;
 
     for (int i = 0; i < 10; i++) {
-      if (i % 2 == 1) {
+      if ((i+1) % 2 == 0) {
         twoSum += arr[i];
       }
 
