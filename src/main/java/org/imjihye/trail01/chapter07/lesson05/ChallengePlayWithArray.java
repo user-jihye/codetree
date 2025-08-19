@@ -32,18 +32,15 @@ public class ChallengePlayWithArray {
         int num, idx;
         num = sc.nextInt();
         idx = -1;
-        for (int j = n-1; j >= 0; j--) {
-          if (arr[j] == num)
+        for (int j = 0; j < n; j++) {
+          if (arr[j] == num) {
             idx = j;
+            break;
+          }
         }
+        System.out.println(idx+1);
 
-        if (idx == -1) {
-          System.out.println(0);
-        } else {
-          System.out.println(idx+1);
-        }
 
-        
       } else if (type == 3) {
         int num1, num2;
         num1 = sc.nextInt();
