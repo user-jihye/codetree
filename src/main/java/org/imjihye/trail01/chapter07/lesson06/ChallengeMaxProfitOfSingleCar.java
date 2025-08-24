@@ -21,7 +21,7 @@ public class ChallengeMaxProfitOfSingleCar {
     int profit;
     for (int i = 0; i < n; i++) {    // buy
       for (int j = i; j < n; j++) {  // sell
-        profit = -(price[i] - price[j]);
+        profit = price[j] - price[i];
         if (profit > maxProfit)
           maxProfit = profit;
       }
