@@ -17,12 +17,9 @@ public class TestMinimumDifferenceBetweenTwoNumbers {
       arr[i] = sc.nextInt();
 
     int minDif = Integer.MAX_VALUE;
-    for (int i = 0; i < n ; i++) {
-      for (int j = 0; j < n; j++) {
-        int dif = arr[i] - arr[j];
-        if (i != j && dif >= 0 && dif < minDif)
-          minDif = dif;
-      }
+    for (int i = 1; i < n ; i++) {
+      if (minDif > arr[i] - arr[i-1])
+        minDif = arr[i] - arr[i-1];
     }
     System.out.println(minDif);
   }
