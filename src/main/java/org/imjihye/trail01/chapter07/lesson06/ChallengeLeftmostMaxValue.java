@@ -17,18 +17,18 @@ public class ChallengeLeftmostMaxValue {
       arr[i] = sc.nextInt();
     }
 
-    int first = n, second = n;
-    while (first > 0) {
+    int rangeIdx = n, maxIdx = n;
+    while (rangeIdx > 0) {
       int max = Integer.MIN_VALUE;
-      for (int i = 0; i < first; i++) {
+      for (int i = 0; i < rangeIdx; i++) {
         if (arr[i] > max) {
           max = arr[i];
-          second = i;
+          maxIdx = i;
         }
       }
 
-      System.out.print((second + 1) + " ");
-      first = second;
+      System.out.print((maxIdx + 1) + " ");
+      rangeIdx = maxIdx;
 
     }
   }
