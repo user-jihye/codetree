@@ -14,9 +14,9 @@ public class IntroFillingRectangleWithDownflow {
     int[][] arr = new int[n][n];
 
     int num = 1;
-    for (int j = 0; j < n; j++) {
-      for (int i = 0; i < n; i++) {
-        arr[i][j] = num;
+    for (int x = 0; x < n; x++) {
+      for (int y = 0; y < n; y++) {
+        arr[y][x] = num;
         num++;
       }
     }
