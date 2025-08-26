@@ -15,29 +15,17 @@ public class TestGridAntiFill {
 
     int num = 1;
     for (int x = n-1; x >= 0; x--) {
-      if (n % 2 == 0) {
-        if (x % 2 == 0) {
-          for (int y = 0; y < n; y++) {
-            arr[y][x] = num;
-            num++;
-          }
-        } else {
-          for (int y = n - 1; y >= 0; y--) {
-            arr[y][x] = num;
-            num++;
-          }
+      // 가장 오른쪽 줄은 항상 증가하는 방향
+      // -> n - 1 - 열번호
+      if ((n - 1 - x) % 2 == 1) {
+        for (int y = 0; y < n; y++) {
+          arr[y][x] = num;
+          num++;
         }
       } else {
-        if (x % 2 == 1) {
-          for (int y = 0; y < n; y++) {
-            arr[y][x] = num;
-            num++;
-          }
-        } else {
-          for (int y = n - 1; y >= 0; y--) {
-            arr[y][x] = num;
-            num++;
-          }
+        for (int y = n-1; y >= 0; y--) {
+          arr[y][x] = num;
+          num++;
         }
       }
     }
