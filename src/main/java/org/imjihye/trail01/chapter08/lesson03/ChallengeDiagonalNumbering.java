@@ -17,27 +17,24 @@ public class ChallengeDiagonalNumbering {
     int col, row;
     int[][] arr = new int[n][m];
     for (int x = 0; x < m; x++) {
-      if (x == m - 1) {
-        for (int y = 0; y < n; y++) {
-          row = y;
-          col = x;
-          while (row < n && col >= 0) {
-            arr[row][col] = num;
-            row++;
-            col--;
-            num++;
-          }
-        }
+      row = 0;
+      col = x;
+      while (row < n && col >= 0) {
+        arr[row][col] = num;
+        row++;
+        col--;
+        num++;
+      }
+    }
 
-      } else {
-        row = 0;
-        col = x;
-        while (row < n && col >= 0) {
-          arr[row][col] = num;
-          row++;
-          col--;
-          num++;
-        }
+    for (int y = 1; y < n; y++) {
+      row = y;
+      col = m-1;
+      while (row < n && col >= 0) {
+        arr[row][col] = num;
+        row++;
+        col--;
+        num++;
       }
     }
 
