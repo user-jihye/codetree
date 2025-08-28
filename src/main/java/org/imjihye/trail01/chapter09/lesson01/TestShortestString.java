@@ -10,21 +10,22 @@ public class TestShortestString {
   public static void main(String[] args) {
 
     Scanner sc = new Scanner(System.in);
-    String[] str = new String[3];
-    for (int i = 0; i < 3; i++) {
-      str[i] = sc.next();
-    }
+    String str1 = sc.next();
+    String str2 = sc.next();
+    String str3 = sc.next();
 
-    int maxDiff = -1;
-    for (int i = 0; i < 3; i++) {
-      for (int j = 0; j < 3; j++) {
-        if (i == j)
-          continue;
+    int len1 = str1.length();
+    int len2 = str2.length();
+    int len3 = str3.length();
 
-        if (str[i].length() - str[j].length() > maxDiff)
-            maxDiff = str[i].length() - str[j].length();
-      }
-    }
-    System.out.println(maxDiff);
+    int longest = len1;
+    if (longest < len2) longest = len2;
+    if (longest < len3) longest = len3;
+
+    int shortest = len1;
+    if (shortest > len2) shortest = len2;
+    if (shortest > len3) shortest = len3;
+
+    System.out.println(longest - shortest);
   }
 }
