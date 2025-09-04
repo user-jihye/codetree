@@ -13,14 +13,13 @@ public class ChallengePrintStringInRange2 {
     int x = sc.nextInt();
 
     int len = str.length();
-    if (x < len) {
-      for (int i = len - 1; i >= len - x; i--) {
-        System.out.print(str.charAt(i));
-      }
-    } else {
-      for (int i = len - 1; i >= 0; i--) {
-        System.out.print(str.charAt(i));
-      }
+    int cnt = 0;
+    for (int i = len - 1; i >= 0; i--) {
+      if (cnt == x)
+        break;
+
+      System.out.print(str.charAt(i));
+      cnt++;
     }
 
   }
