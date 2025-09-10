@@ -21,5 +21,6 @@ public class ChallengeDivideString {
 
       if ((i + 1) % 5 == 0)
         System.out.println();
+    }
   }
 }
